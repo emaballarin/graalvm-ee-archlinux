@@ -20,6 +20,7 @@ conflicts=("$pkgname_")
 install="$pkgname.install"
 source=("graalvm-ee-linux-amd64-19.0.0.tar.gz")
 sha256sums=('SKIP')
+PKGEXT='.pkg.tar' # Do not compress
 
 package() {
     cd "${pkgname_}vm-ee-${pkgver_}"
@@ -28,5 +29,6 @@ package() {
     touch LICENSE.txt
     install -DTm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 
-    ln -s ../lib/jvm/java-8-graal/bin/gu "$pkgdir/usr/bin/"
+    mkdir -p "$pkgdir/usr/bin/"
+    ln -s ../lib/jvm/java-8-graal/bin/gu "$pkgdir/usr/bin/gu"
 }

@@ -16,6 +16,7 @@ provides=("$pkgname_")
 conflicts=("$pkgname_")
 source=("python-installable-svm-svmee-linux-amd64-19.0.0.jar")
 sha256sums=('SKIP')
+PKGEXT='.pkg.tar' # Do not compress
 
 package() {
     local file eq permissions mode name target
