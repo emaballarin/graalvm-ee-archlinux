@@ -27,4 +27,6 @@ package() {
     cp -a -t "$pkgdir/usr/lib/jvm/java-8-graal/" *
     touch LICENSE.txt
     install -DTm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+    ln -s ../lib/jvm/java-8-graal/bin/gu "$pkgdir/usr/bin/"
 }
