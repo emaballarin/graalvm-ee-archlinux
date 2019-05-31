@@ -57,7 +57,7 @@ package() {
 
     install -DTm644 jre/languages/R/LICENSE_FASTR "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 
-    ln -s ../lib/jvm/java-8-graal/bin/R "$pkgdir/usr/bin/"
+    mkdir -p "$pkgdir/usr/bin/"
     ln -s ../lib/jvm/java-8-graal/bin/R "$pkgdir/usr/bin/graal-R"
     ln -s ../lib/jvm/java-8-graal/bin/R "$pkgdir/usr/bin/graalR"
     ln -s ../lib/jvm/java-8-graal/bin/R "$pkgdir/usr/bin/fastr"
