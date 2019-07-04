@@ -2,7 +2,7 @@
 
 pkgname_=fastr
 pkgname=${pkgname_}-bin
-pkgver_=19.0.2
+pkgver_=19.1.0
 pkgver=${pkgver_/-/_}
 pkgrel=1
 pkgdesc='Graal based, high-performance implementation of the R language'

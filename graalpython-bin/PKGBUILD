@@ -2,9 +2,9 @@
 
 pkgname_=graalpython
 pkgname=${pkgname_}-bin
-pkgver_=19.0.2
+pkgver_=19.1.0
 pkgver=${pkgver_/-/_}
-pkgrel=2
+pkgrel=1
 pkgdesc='Graal based, high-performance implementation of the Python language (early development)'
 arch=('x86_64')
 url='https://github.com/graalvm/graalpython'
@@ -14,7 +14,7 @@ makedepends=()
 optdepends=()
 provides=("$pkgname_")
 conflicts=("$pkgname_")
-source=("python-installable-svm-svmee-linux-amd64-19.0.2.jar")
+source=("python-installable-svm-svmee-linux-amd64-19.1.0.jar")
 sha256sums=('SKIP')
 PKGEXT='.pkg.tar' # Do not compress
 

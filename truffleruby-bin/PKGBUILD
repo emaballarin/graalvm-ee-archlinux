@@ -2,9 +2,9 @@
 
 pkgname_=truffleruby
 pkgname=${pkgname_}-bin
-pkgver_=19.0.2
+pkgver_=19.1.0
 pkgver=${pkgver_/-/_}
-pkgrel=2
+pkgrel=0
 pkgdesc='Graal based, high-performance implementation of the Ruby language'
 arch=('x86_64')
 url='https://github.com/oracle/truffleruby'
@@ -14,7 +14,7 @@ makedepends=()
 optdepends=()
 provides=("$pkgname_")
 conflicts=("$pkgname_")
-source=("ruby-installable-svm-svmee-linux-amd64-19.0.2.jar")
+source=("ruby-installable-svm-svmee-linux-amd64-19.1.0.jar")
 sha256sums=('SKIP')
 PKGEXT='.pkg.tar' # Do not compress
 

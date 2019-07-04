@@ -2,9 +2,9 @@
 
 pkgname_=graal
 pkgname=${pkgname_}-bin
-pkgver_=19.0.2
+pkgver_=19.1.0
 pkgver=${pkgver_/-/_}
-pkgrel=2 # TODO reset to 1 with the next pkgver change
+pkgrel=1 # TODO reset to 1 with the next pkgver change
 pkgdesc='Universal virtual machine for running applications written in a variety of languages (JVM-based, LLVM-based, or other)'
 arch=('x86_64')
 url='https://www.graalvm.org/'
@@ -18,7 +18,7 @@ provides=('java-runtime=8'
           "$pkgname_")
 conflicts=("$pkgname_")
 install="$pkgname.install"
-source=("graalvm-ee-linux-amd64-19.0.2.tar.gz")
+source=("graalvm-ee-linux-amd64-19.1.0.tar.gz")
 sha256sums=('SKIP')
 PKGEXT='.pkg.tar' # Do not compress
 
