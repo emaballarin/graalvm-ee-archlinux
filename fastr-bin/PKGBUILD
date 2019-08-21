@@ -2,7 +2,7 @@
 
 pkgname_=fastr
 pkgname=${pkgname_}-bin
-pkgver_=19.1.0
+pkgver_=19.2.0
 pkgver=${pkgver_/-/_}
 pkgrel=1
 pkgdesc='Graal based, high-performance implementation of the R language'
@@ -19,6 +19,12 @@ sha256sums=('SKIP')
 PKGEXT='.pkg.tar' # Do not compress
 
 package() {
+    # A band-aid fix to prevent an error
+    mkdir -p "$pkgdir/usr/lib/jvm/java-8-graal/"
+    cp -f "$srcdir/LICENSE_FASTR" "$pkgdir/usr/lib/jvm/java-8-graal/./LICENSE_FASTR"
+    cp -f "$srcdir/3rd_party_licenses_fastr.txt" "$pkgdir/usr/lib/jvm/java-8-graal/./3rd_party_licenses_fastr.txt"
+
+    # Go ahead as usual...
     local file eq permissions mode name target
 
     mkdir -p "$pkgdir/usr/lib/jvm/java-8-graal/"
